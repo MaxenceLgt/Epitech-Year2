@@ -1,0 +1,14 @@
+.chipsets:
+input in1
+input in2
+input in3
+output out
+3and and1
+not not1
+
+.links:
+in1:1 and1:1
+in2:1 and1:2
+in3:1 and1:3
+and1:4 not1:1
+not1:2 out:1

@@ -1,0 +1,16 @@
+# Basic XOR logic gate
+#
+# in_1  -1-+---\
+#          |xor |-3- out
+# in_2  -2-+---/
+
+.links:
+in_1:1 nand1:1
+in_2:1 nand1:2
+in_1:1 nand2:1
+nand1:3 nand2:2
+nand1:3 nand3:1
+in_2:1 nand3:2
+nand2:3 nand4:1
+nand3:3 nand4:2
+out:1 nand4:3

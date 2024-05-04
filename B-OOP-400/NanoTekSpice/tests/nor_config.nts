@@ -1,0 +1,14 @@
+# NOR
+
+.chipsets:
+input in_01
+input in_02
+output out
+or or1
+not not1
+
+.links:
+in_01:1 or1:1
+in_02:1 or1:2
+or1:3 not1:1
+out:1 not1:2

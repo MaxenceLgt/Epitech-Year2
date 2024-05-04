@@ -1,0 +1,68 @@
+# 4-bits Adder (4008)
+#
+#                  +-14- out_c
+#                  |
+#           +-4008-^------+
+#           |      |      |
+# in_b4 -15->---+--^--+   |
+#           |   | sum |--->-13- out_3
+# in_a4  -1->---+--+--+   |
+#           |      |      |
+# in_b3  -2->---+--^--+   |
+#           |   | sum |--->-12- out_2
+# in_a3  -3->---+--+--+   |
+#           |      |      |
+# in_b2  -4->---+--^--+   |
+#           |   | sum |--->-11- out_1
+# in_a2  -5->---+--+--+   |
+#           |      |      |
+# in_b1  -6->---+--^--+   |
+#           |   | sum |--->-10- out_0
+# in_a1  -7->---+--+--+   |
+#           |      |      |
+# in_c   -9->------+      |
+#           |             |
+#        -8-+- ign   ign -+-16-
+#           |             |
+#           +-------------+                                                          
+
+.chipsets:
+input in_a4
+input in_b3
+input in_a3
+input in_b2
+input in_a2
+input in_b1
+input in_a1
+input in_8
+input in_c
+output out_0
+output out_1
+output out_2
+output out_3
+output out_c
+input in_b4
+input in_16
+sum sum1
+sum sum2
+sum sum3
+sum sum4
+
+.links:
+in_c:1 sum4:3
+in_a1:1 sum4:2
+in_b1:1 sum4:1
+sum4:4 out_0:1
+sum4:5 sum3:3
+in_a2:1 sum3:2
+in_b2:1 sum3:1
+sum3:4 out_1:1
+sum3:5 sum2:3
+in_a3:1 sum2:2
+in_b3:1 sum2:1
+sum2:4 out_2:1
+sum2:5 sum1:3
+in_a4:1 sum1:2
+in_b4:1 sum1:1
+sum1:4 out_3:1
+sum1:5 out_c:1

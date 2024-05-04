@@ -1,0 +1,33 @@
+# flipflop
+
+.chipsets:
+output q
+output nq
+input clock
+input reset
+input data
+input set
+input null
+input set1
+input data1
+input reset1
+input clock1
+output nq1
+output q1
+input null1
+latch latch1
+latch latch2
+
+.links:
+q:1 latch1:5
+nq:1 latch1:6
+clock:1 latch1:3
+reset:1 latch1:2
+data:1 latch1:4
+set:1 latch1:1
+q1:1 latch2:5
+nq1:1 latch2:6
+clock1:1 latch2:3
+reset1:1 latch2:2
+data1:1 latch2:4
+set1:1 latch2:1

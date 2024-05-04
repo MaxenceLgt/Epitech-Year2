@@ -1,0 +1,51 @@
+# Test of AND logic gate (4081)
+#
+#           +---------4081---------+
+# in_01  -1-|>-+---\       ignored-|-14-
+#           |  | &  |-+            |
+# in_02  -2-|>-+---/  |     /---+-<|-13- in_13
+#           |         |  +-|  & |  |
+# out_03 -3-|<--------+  |  \---+-<|-12- in_12
+#           |            |         |
+# out_04 -4-|<--------+  +-------->|-11- out_11
+#           |         |            |
+# in_05  -5-|>-+---\  |  +-------->|-10- out_10
+#           |  | &  |-+  |         |
+# in_06  -6-|>-+---/     |  /---+-<|-9-  in_09
+#           |            +-|  & |  |
+#        -7-|-ignored       \---+-<|-8-  in_08
+#           +----------------------+
+
+.chipsets:
+input in_01
+input in_02
+output out_03
+output out_04
+input in_05
+input in_06
+input in_07
+input in_08
+input in_09
+output out_10
+output out_11
+input in_12
+input in_13
+input in_14
+and and1
+and and2
+and and3
+and and4
+
+.links:
+in_01:1 and1:1
+in_02:1 and1:2
+out_03:1 and1:3
+out_04:1 and2:3
+in_05:1 and2:1
+in_06:1 and2:2
+in_08:1 and3:2
+in_09:1 and3:1
+out_10:1 and3:3
+out_11:1 and4:3
+in_12:1 and4:1
+in_13:1 and4:2

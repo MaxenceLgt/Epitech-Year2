@@ -1,0 +1,13 @@
+# Basic counter logic gate
+#
+
+.chipsets:
+input clock1
+input clock2
+input in_reset
+output Q
+output revQ
+not not
+
+.links:
+
