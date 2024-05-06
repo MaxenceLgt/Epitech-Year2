@@ -10,7 +10,223 @@
 ### Usage
 
 ### Project Architecture
-[![](https://mermaid.ink/img/pako:eNrNWW1P4zgQ_itWVqro0iK6lC0EDglxuxLSsYcE9-Wup8okLvWROpHjcMty5LefHaepPXbTdg9Wx5ftep4Zj5958UuegyiNSRAG_X5_zAQVCQnRF8zSW_Jwk9GIoHMezaggkSg4GbMKFiU4z3-m-J7j-Zgh-cfwnOQZlnAmcvSsB9VfBUWXF-k8SxlhwhCpv9PTSyYIn0rNszNbtIvKpdpO9z2U5nReJFiQnVzEYZjTb2QikKDRQxc9pjR28JG0VXjht5zmQlpypyDiF8oeLJWMsp6xHtRJxYzwHjIx1dC1At6laYJofi1JIPEKxzppRjgWKf9pJ0pZLhp_UKf6p2tMZyi_jBmkuVF0WP7EirmahKbM4fk3FpMpZSQG47e8IGDoM05yYrlgeaK9uJmRJDFdOD29UAJz4t0KtNN1RjQD2kQnvfvLRJSuEi9YraL5F5yyezSlCdFkG1AZ_yITpKEy33EgMBCGG4vfS3T_gvKooGKZCpM5pqwebZhR_5jsnC_xNkfnd9J7HAmTpncG3Fz3O1T6Bburs1yuOAw9qb6bPhLOaUzWVZRX5S0qxDcRDI21mqZQDHI7JikV843sE-cpN8isHCtYymPCSSyjmJWmr6H2_FG2wJSX1cRGQZYlmiSSgvzEsGh7N5FRLXByo_5zAuetJ5konk8WhQQqSlXicmVrKssCW7lhSxa9xjTtVNxqY01kNsy47w8qcLGlXj2L8Wu_mOxWTW1jem20RQkQaZ-AdYfhFns_jmLoZAvHvvWs0AdZLE8V8cY0W2CLFVuinbJNOxyvNvbjKAYutjDsWYxfG_B7kaTRw8YE22iLFCDSXgHrDsct9l6D5O_YmzaLC1xXS2B8FLTo98EuMC3kEfpmuUAQvksmudk4fDbaohuItO_AuhO-Fnv_6_DBdbWEz0dBi_6W4fu1ENvED8AtwqFMuw8ncELYZvLH9TnHzZaIeJe0ygLsdvD0vYZwR8Hix5XWJQ9ngay7iuZFpBMthi2dst2XeyKuMc8JlzcU9UNaAuJbGTEpNIIIAFc4M4yjlSdc7WZ9ws1nWEkz4Zxyy9K1r879-ea2Ky8tM_LO6WzkpqZ6U-iu9Qw4di7krQJeR-rkNu4k7_dMPRzHMH6rJ0RNTHsed0E3U1fRpDVF1F3VrxrTPEvwk3tNRd_RVtG226KT-JYxuDN6y6TVSP-_56S6cC_TfHvTOiX19e2SxeSrYaKuO5RVhejtQJ-xuhA-VbdJu_t8IbkgMfJdHpYqVhbM83twKzCAhqRfxywlXyOSCfT3DKv61qOR5MpM7L45w0RO4W-kCwLrOdceHAHePjpCYZ0fcA73-Nhmleay32SktVt0xFMm81Y9J5g3f06wIBvobdFmtA3dBDfuf9OCRer1rVyb1WXbCdTLo2fYefwwE2rrStnCeTSpKJdgyc6JN-EWpbUmz2qYlQiLMc3GwlAn0z-shPKp17jPsuU6PfiL7MG9V9goUUdp9bbbFqVS04S6J7B3125fzGiWE3v3SOg9e023qWzS7I6_hfvGO-Gb-O5OXO0OTODmQKAtNvv364Zczg-aj2wR1fVCnpJOtJVE7rKm9dJG65PvZnDYGppikB2BRKK7HHB6QS2Bz6BOF5lM9Q_4ZOm4hWi1zPW4VC-wrS1ss52aKq3bqQV8_e3Us5luswxbqXUhAPq2JwNtSbbyP8ZBpdAMjIM_V3dvYOVK1p9NxDVP1ZdDJC_T3Prcob-xRPP4CjN87xy7jPN7v__PmfHar-XnQA6Pn36U_Xbpx1iPyH6I9UK3wh_rqciPsd8j_BhwQfaAzmAihioRVCesa8-pdaVjHWihxqKdKKBVqhDYJEm9aM9XFwBxzyYA4DYsnSnVQr1Bdm4ehtvueiAbGlElrhJXk-mxoBfMCZ9jGgdhUCX1OBAzMifjIJQ_YzLFRSLGwZi9SCguRHrzxKIgFDKBekGRxfI0Wn84XwxmmAXhc_A1CPuD4dFobzQaHBwcfxh-HAz3D3rBUxAOPh7tDQejw4PRaHgwGByNRi-94FuaShMf9o6P9w8P90f7R8fDj0fDytzvlUhbJzGVK7rS3_irT_0v_wJ6sXDp?type=png)](https://mermaid.live/edit#pako:eNrNWW1P4zgQ_itWVqro0iK6lC0EDglxuxLSsYcE9-Wup8okLvWROpHjcMty5LefHaepPXbTdg9Wx5ftep4Zj5958UuegyiNSRAG_X5_zAQVCQnRF8zSW_Jwk9GIoHMezaggkSg4GbMKFiU4z3-m-J7j-Zgh-cfwnOQZlnAmcvSsB9VfBUWXF-k8SxlhwhCpv9PTSyYIn0rNszNbtIvKpdpO9z2U5nReJFiQnVzEYZjTb2QikKDRQxc9pjR28JG0VXjht5zmQlpypyDiF8oeLJWMsp6xHtRJxYzwHjIx1dC1At6laYJofi1JIPEKxzppRjgWKf9pJ0pZLhp_UKf6p2tMZyi_jBmkuVF0WP7EirmahKbM4fk3FpMpZSQG47e8IGDoM05yYrlgeaK9uJmRJDFdOD29UAJz4t0KtNN1RjQD2kQnvfvLRJSuEi9YraL5F5yyezSlCdFkG1AZ_yITpKEy33EgMBCGG4vfS3T_gvKooGKZCpM5pqwebZhR_5jsnC_xNkfnd9J7HAmTpncG3Fz3O1T6Bburs1yuOAw9qb6bPhLOaUzWVZRX5S0qxDcRDI21mqZQDHI7JikV843sE-cpN8isHCtYymPCSSyjmJWmr6H2_FG2wJSX1cRGQZYlmiSSgvzEsGh7N5FRLXByo_5zAuetJ5konk8WhQQqSlXicmVrKssCW7lhSxa9xjTtVNxqY01kNsy47w8qcLGlXj2L8Wu_mOxWTW1jem20RQkQaZ-AdYfhFns_jmLoZAvHvvWs0AdZLE8V8cY0W2CLFVuinbJNOxyvNvbjKAYutjDsWYxfG_B7kaTRw8YE22iLFCDSXgHrDsct9l6D5O_YmzaLC1xXS2B8FLTo98EuMC3kEfpmuUAQvksmudk4fDbaohuItO_AuhO-Fnv_6_DBdbWEz0dBi_6W4fu1ENvED8AtwqFMuw8ncELYZvLH9TnHzZaIeJe0ygLsdvD0vYZwR8Hix5XWJQ9ngay7iuZFpBMthi2dst2XeyKuMc8JlzcU9UNaAuJbGTEpNIIIAFc4M4yjlSdc7WZ9ws1nWEkz4Zxyy9K1r879-ea2Ky8tM_LO6WzkpqZ6U-iu9Qw4di7krQJeR-rkNu4k7_dMPRzHMH6rJ0RNTHsed0E3U1fRpDVF1F3VrxrTPEvwk3tNRd_RVtG226KT-JYxuDN6y6TVSP-_56S6cC_TfHvTOiX19e2SxeSrYaKuO5RVhejtQJ-xuhA-VbdJu_t8IbkgMfJdHpYqVhbM83twKzCAhqRfxywlXyOSCfT3DKv61qOR5MpM7L45w0RO4W-kCwLrOdceHAHePjpCYZ0fcA73-Nhmleay32SktVt0xFMm81Y9J5g3f06wIBvobdFmtA3dBDfuf9OCRer1rVyb1WXbCdTLo2fYefwwE2rrStnCeTSpKJdgyc6JN-EWpbUmz2qYlQiLMc3GwlAn0z-shPKp17jPsuU6PfiL7MG9V9goUUdp9bbbFqVS04S6J7B3125fzGiWE3v3SOg9e023qWzS7I6_hfvGO-Gb-O5OXO0OTODmQKAtNvv364Zczg-aj2wR1fVCnpJOtJVE7rKm9dJG65PvZnDYGppikB2BRKK7HHB6QS2Bz6BOF5lM9Q_4ZOm4hWi1zPW4VC-wrS1ss52aKq3bqQV8_e3Us5luswxbqXUhAPq2JwNtSbbyP8ZBpdAMjIM_V3dvYOVK1p9NxDVP1ZdDJC_T3Prcob-xRPP4CjN87xy7jPN7v__PmfHar-XnQA6Pn36U_Xbpx1iPyH6I9UK3wh_rqciPsd8j_BhwQfaAzmAihioRVCesa8-pdaVjHWihxqKdKKBVqhDYJEm9aM9XFwBxzyYA4DYsnSnVQr1Bdm4ehtvueiAbGlElrhJXk-mxoBfMCZ9jGgdhUCX1OBAzMifjIJQ_YzLFRSLGwZi9SCguRHrzxKIgFDKBekGRxfI0Wn84XwxmmAXhc_A1CPuD4dFobzQaHBwcfxh-HAz3D3rBUxAOPh7tDQejw4PRaHgwGByNRi-94FuaShMf9o6P9w8P90f7R8fDj0fDytzvlUhbJzGVK7rS3_irT_0v_wJ6sXDp)
+```mermaid
+---
+title: NanoTekSpice Architecture
+---
+classDiagram
+    namespace nts {
+        class IComponent{
+            <<Interface>>
+            + ~IComponent()*
+            + simulate(std::size_t tick) void*
+            + compute(std::size_t tick) Tristate*
+            + setLink(std::size_t pin, IComponent &other, std::size_t otherPin, bool isPassed) void*
+            + &operator=(const Tristate &state) IComponent*
+        }
+
+        class Tristate {
+            <<Enumeration>>
+            +Undefined
+            +True
+            +False
+        }
+    }
+
+    class Shell {
+        <<Class>>
+        +Shell()
+        +Shell(const Shell &obj)
+        +~Shell()
+        +run(const std::string file) void
+        +comupteComponents() void
+        +operator=(const Shell &obj) Shell &
+        -CircuitComponent _mainCircuit
+    }
+    
+    class AComponent  {
+        <<Abstract>>
+        # AComponent()
+        # ~AComponent()
+        +compute(std::size_t tick) nts::Tristate*
+        +override simulate(std::size_t tick) void
+        +override setLink(std::size_t pin, IComponent &other, std::size_t otherPin, bool isPassed) void
+        +override operator=(const nts::Tristate &state) AComponent &
+        +class ComponentError
+        #std::unordered_map~std::size_t : std::vector~nts::IComponent*~~ _links;
+        #nts::Tristate _actualState;
+        #std::size_t _tick;
+
+    }
+
+    class TrueComponent {
+        <<Class>>
+        +TrueComponent()
+        +TrueComponent(const TrueComponent &obj)
+        +~TrueComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override operator=(const nts::Tristate &state) TrueComponent &
+        +operator=(const TrueComponent &obj) TrueComponent &
+    }
+    class FalseComponent {
+        <<Class>>
+        +FalseComponent()
+        +FalseComponent(const FalseComponent &obj)
+        +~FalseComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override operator=(const nts::Tristate &state) FalseComponent &
+        +operator=(const FalseComponent &obj) FalseComponent &
+    }
+
+    class NandComponent {
+        <<Class>>
+        +NandComponent()
+        +NandComponent(const NandComponent &obj)
+        +~NandComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override operator=(const nts::Tristate &state) NandComponent &
+        +operator=(const NandComponent &obj) NandComponent &
+    }
+
+    class ClockComponent {
+        <<Class>>
+        +ClockComponent()
+        +ClockComponent(const ClockComponent &obj)
+        +~ClockComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override simulate(std::size_t tick) void
+        +override operator=(const nts::Tristate &state) ClockComponent &
+        +operator=(const ClockComponent &obj) ClockComponent &
+        -nts::Tristate _futurState
+    }
+
+    class InputComponent {
+        <<Class>>
+        +InputComponent()
+        +InputComponent(const InputComponent &obj)
+        +~InputComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override simulate(std::size_t tick) void
+        +override operator=(const nts::Tristate &state) InputComponent &
+        +operator=(const InputComponent &obj) InputComponent &
+        -nts::Tristate _futurState
+    }
+
+    class OutputComponent {
+        <<Class>>
+        +OutputComponent()
+        +OutputComponent(const OutputComponent &obj)
+        +~OutputComponent()
+        +override compute(std::size_t tick) nts::Tristate
+        +override operator=(const nts::Tristate &state) OutputComponent &
+        +operator=(const OutputComponent &obj) OutputComponent &
+    }
+
+    class CircuitComponent {
+        <<Class>>
+        + CircuitComponent()
+        + CircuitComponent(const CircuitComponent &obj)
+        + CircuitComponent(std::string &component)
+        + ~CircuitComponent()
+        + getParser() Parsing
+        + getTick() std::size_t
+        + getMapComponent() std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~
+        + getMapLinks() std::unordered_map~std::string : std::size_t~
+        + findComponent(const std::string name) std::shared_ptr~nts::IComponent~
+        + getAtPin(std::size_t pin) nts::IComponent *.
+        + addComponent(std::shared_ptr~nts::IComponent~ component, std::string name) void
+        + fillCircuitComponent(std::string filename) void
+        + display() void
+        + override simulate(std::size_t tick) void
+        + override operator=(const nts::Tristate &state) CircuitComponent &
+        + operator=(const CircuitComponent &obj) CircuitComponent &
+        -std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~ _mapComponent
+        -std::unordered_map~std::string : std::size_t~ _linkIndex
+        -Parsing parser
+    }
+
+    class FactoryError {
+        <<Nested Class>>
+        +FactoryError(std::string msg)
+        +~FactoryError()
+        -const noexcept what() const char*.
+        -std::string _msg
+    }
+
+    class ComponentFactory {
+        <<Class>>
+        +ComponentFactory()
+        +ComponentFactory(const ComponentFactory &obj)
+        +~ComponentFactory()
+        +isMappedComponent(const std::string &type) bool
+        +createComponent(const std::string &type) std::shared_ptr~nts::IComponent~
+        +const getMap() std::unordered_map~std::string : std::function~std::shared_ptr~nts::IComponent~~~
+        +operator=(const ComponentFactory &obj) ComponentFactory &
+        +class FactoryError
+        -std::unordered_map~std::string : std::function~std::shared_ptr~nts::IComponent~~~ _creationMap;
+    }
+
+    class Parsing {
+        <<Class>>
+        +Parsing()
+        +Parsing(const Parsing &parsing)
+        +~Parsing()
+        +parsingFile(std::string fileName, std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~ &_map, std::unordered_map~std::string : std::size_t~ &_linkIndex); void
+        +parsingChipset(std::string ligne, std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~ &_map,int nbr, std::unordered_map~std::string : std::size_t~ &_linkIndex); void
+        +parsingLink(std::string ligne, std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~ &_map); void
+        +mapContain(std::string componentName, std::unordered_map~std::string : std::shared_ptr~nts::IComponent~~ &_map); bool
+        +getInputs(); std::list~std::string~
+        +getOutputs(); std::list~std::string~
+        +operator=(const Parsing &object) Parsing &
+        +class ParsingError
+        #ComponentFactory _factory
+        #std::list~std::string~ inputs
+        #std::list~std::string~ outputs
+    }
+
+    class ParsingError {
+        <<Nested Class>>
+        +ParsingError(std::string msg)
+        +~ParsingError()
+        -const noexcept what() const char*.
+        -std::string _msg
+    }
+    class ComponentError {
+        <<Nested Class>>
+        +ComponentError(std::string msg)
+        +~ComponentError()
+        -const noexcept what() const char*.
+        -std::string _msg
+    }
+
+    class exception["std::exception"]{
+        <<Class>>
+    }
+
+    class Main {
+        <<Program Start>>
+        Shell cmdManager
+    }
+
+    IComponent --|> AComponent
+    AComponent --|> CircuitComponent
+    AComponent --|> FalseComponent
+    AComponent --|> TrueComponent
+    AComponent --|> NandComponent
+    AComponent --|> ClockComponent
+    AComponent --|> InputComponent
+    AComponent --|> OutputComponent
+    AComponent --> ComponentError : contains
+    ComponentFactory --> FactoryError : contains
+    Parsing --> ParsingError : contains
+    exception --|> ComponentError
+    exception --|> FactoryError
+    exception --|> ParsingError
+    Shell --> CircuitComponent
+    CircuitComponent --> Parsing
+    Parsing --> ComponentFactory
+    Main --> Shell
+```
 
 ### Contributors
 
