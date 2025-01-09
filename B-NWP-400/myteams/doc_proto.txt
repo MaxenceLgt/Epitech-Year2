@@ -1,0 +1,150 @@
+Teams Les animals								A. Doriel											12/04/2024 
+
+ 
+
+Protocole Documentation FTP 
+
+ 
+
+Table of Contents 
+
+	1. Introduction .................................................................
+    2. Structure de données .........................................................
+    3. Informations importantes sur le protocole ....................................
+        3.1 Premier digit ...........................................................
+        3.2 Deuxième digit ..........................................................
+        3.3 Troisième Digit .........................................................
+    4. Code de Réponses positive ....................................................
+        4.1 Authenthification .......................................................
+        4.2 Code d’Informations .....................................................
+        4.3 Code d’informations pour les utilisateurs ...............................
+        4.4 Code d’informations pour les équipes ....................................
+        4.5 Code d’informations pour les fil de discussions et channels .............
+        4.6 Code d’informations des reçus de données ................................
+        4.7 Services et syntaxes ....................................................
+    5. Réponse d’achèvement négative transitoire (Service & Syntax) .................
+    6. Code de Réponses négatif .....................................................
+        6.1 Authentification et compte ..............................................
+        6.2 Informations ............................................................
+        6.3 Code d’informations pour les équipes ....................................
+        6.4 Code d’informations pour les fil de discussions et channels .............
+        6.5 Services et syntaxes ....................................................
+
+
+1 – Introduction :  
+
+Ce document décrit tous les différents codes permettant de communiquer entre le serveur et le client. 
+Différentes explications sont présentes afin de pouvoir comprendre les codes et chacun de leur format. 
+Les différentes structures de données sont aussi expliquées. Ce protocole est au but du projet teams 
+dans le cadre de l’école Epitech technologie en deuxième année dans le module NWP. 
+
+2 – Structure de données :
+
+La donnée de structure que s'envoie les clients et le server est est basée sur 7 variable : 
+    char code[4];
+    user_t sender;
+    user_t *users;
+    scope_t *message;
+    scope_t *team;
+    scope_t *channel;
+    scope_t *thread;
+
+Ces données permettent la communication entre le serveur et les clients.
+
+3 – Informations importantes sur le protocole : 
+
+    3.1 Premier digit : 
+        Le premier digit à trois possibiliter :
+         - 2yz qui est une réponse d'achèvement positive.
+         - 4yz qui est une réponse d’achèvement négative transitoire.
+         - 5yz qui est une réponse réponse d'achèvement négative permanente.
+
+    3.2 Deuxième digit :
+        Le deuxième digit à 7 possibiliter :
+         - x0z qui est une authentification et comptabilité. (Réponse en lien avec le logging et tout les processus de compte)
+         - x1z Informations. (Réponse à des requêtes d’informations (help, user, …))
+         - x2z qui est les informations des utilisateurs et les utilisateurs.
+         - x3z qui sont les code d'informations d'équipe.
+         - x4z qui sont les codes des channels et des fil de discussions.
+         - x8z qui sont les codes de datas reçu par le serveur.
+         - x9z qui sont les codes d'erreurs et de syntaxes. (Réponse lié au service (trop de requêtes server, …))
+
+    3.3 Troisième digit :
+        Le troisième digit permet une graduation de sens (séparer les erreurs d’un même xy pour xyz)
+
+4 Code de réponses positive
+
+    4.1 Authenthification :
+        - 200 utilisateur qui est entrain de se login.
+        - 201 utilisateur qui à réussi à se déconnecter.
+    
+    4.2 Informations :
+        - 210 code pour help.
+        - 211 code pour les infos de message (en utilisation).
+        - 212 La liste de toute les teams qui sont utiliser.
+        - 213 Les informations specific aux utilisateurs.
+        - 214 Les informations des utilisateurs.
+        - 215 Les messages abonnées.
+        - 216 Les messages qu'envoie les abonnées.
+        - 217 Les informations des messages.
+
+    4.3 Code d’informations pour les utilisateurs :
+        - 220 Commande valide de l'utilisateur.
+        - 221 Commande valide dans une équipe.
+        - 222 Command valide dans un channel.
+        - 223 Command valide dans un fil de discussion.
+        - 225 Réussite de l'envoie du message vers ...
+
+    4.4 Code d’informations pour les équipes :
+        - 230 Utilisateur à réussi à s'inscrire à une équipe.
+        - 231 Utilisateur à réussi à se désinscrire d'une équipe.
+        - 232 L'équipe à réussi à être créé.
+        - 234 La list des channels de la team.
+        - 235 Les détails de l'équipe.
+    
+    4.5 Code d’informations pour les fil de discussions et channels :
+        - 240 Channel créé.
+        - 241 fil de discussion créé.
+        - 244 Liste tout les fil de discussions du channel.
+        - 245 Liste tout les messages du fil de discussion.
+        - 247 Affiche les informations du channel.
+        - 248 Affiche les informations du fil de discussion.
+
+    4.6 Code d’informations des reçus de données :
+        - 280 Message privé reçu.
+        - 281 Réponse au fil de discussion reçu.
+        - 282 Nouvelle équipe créé.
+        - 283 Nouveau channel créé.
+        - 284 Nouveau fil de discussion créé.
+
+    4.7 Services et syntaxes :
+        - 290 La command est valide.
+
+5 Réponse d’achèvement négative transitoire (Service & Syntax) :
+    - 495 Trop de demandes réessayez plus tard.
+
+6 Code de Réponses négatif
+    6.1 Authenthification :
+        - 500 L'utilisateur doit être connecté.
+
+    6.2 Informations sur les utilisateurs :
+        - 521 Contexte non défini pour l'équipe.
+        - 522 Contexte non défini pour l'équipe.
+        - 523 Contexte non défini pour le fil de discussion.
+        - 525 Utilisateur non trouvé.
+
+    6.3 Informations sur les équipes :
+        - 530 Team non trouvé.
+        - 531 Vous n'êtes pas inscrit à cette équipe.
+        - 532 L'équipe est déjà créé.
+
+    6.4 Informations sur les fils de discussion et channels :
+        - 540 Channel non trouvé.
+        - 541 Fil de discussion non-trouvé.
+        - 543 Le channel est déjà créé.
+        - 544 Le fil de discussion est déjà créé.
+
+    6.5 Services et syntaxes :
+        - 592 Erreur de syntaxe dans les arguments.
+        - 593 Commande invalide.
+        - 594 Mauvaise séquence de commande (créer une liste d'informations sans utilisation).
