@@ -1,0 +1,55 @@
+- name: Copy worker service
+  become: true
+  template:
+    src: "../files/worker.service"
+    dest: "/etc/systemd/system"
+
+- name: Install maven
+  become: true
+  apt:
+    name: maven
+    state: present
+
+- name: Get .deb to install java21 (maven offers java17 not compatible with worker)
+  become: true
+  get_url:
+    url: "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
+    dest: "/home/{{ ansible_user }}"
+
+- name: install .deb for java21 using dpkg
+  become: true
+  shell: "dpkg -i jdk-21_linux-x64_bin.deb"
+  args:
+    chdir : "/home/{{ ansible_user }}"
+
+- name: Untar file in Virtual Machine
+  become: true
+  unarchive:
+    src: "../../../worker.tar"
+    dest: "/home/{{ ansible_user }}"
+
+- name: Install maven dependencies
+  become: true
+  shell: mvn dependency:resolve
+  args:
+    chdir: /home/{{ ansible_user }}/worker
+
+- name: Compile jar with dependencies
+  become: true
+  shell: mvn package
+  args:
+    chdir: /home/{{ ansible_user }}/worker
+
+- name: Restarting service
+  become: true
+  systemd:
+    name: worker
+    state: restarted
+    daemon-reload: yes
+
+- name: Enable worker service on boot
+  become: true
+  systemd:
+    name: worker
+    state: started
+    enabled: yes

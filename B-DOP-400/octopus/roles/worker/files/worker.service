@@ -1,0 +1,17 @@
+[Unit]
+Description=Upload worker service
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=REDIS_HOST={{ redis_host }}
+Environment=POSTGRES_HOST={{ postgresql_host }}
+Environment=POSTGRES_PORT=5432
+Environment=POSTGRES_DB={{ db_name }}
+Environment=POSTGRES_USER={{ db_user }}
+Environment=POSTGRES_PASSWORD={{ db_user_pass }}
+ExecStart=java -jar /home/{{ansible_user }}/worker/target/worker-jar-with-dependencies.jar
+Restart:on-failure
+
+[Install]
+WantedBy=multi-user.target

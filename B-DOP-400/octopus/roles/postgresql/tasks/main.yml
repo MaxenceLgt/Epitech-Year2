@@ -1,0 +1,91 @@
+- name: Import Postgres repo signing key
+  become: True
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
+- name: Add postgresql 16 package repo
+  become: True
+  apt_repository:
+    repo: deb https://apt.postgresql.org/pub/repos/apt bookworm-pgdg main
+    update_cache: yes
+
+- name: Install postgresql 16 and tools
+  become: True
+  apt:
+    name:
+      - postgresql-16
+      - postgresql-client-16
+      - python3-psycopg2
+      - acl
+    state: present
+
+- name: Copy database connection configuration
+  become: true
+  template:
+    src: "../files/pg_hba.conf"
+    dest: "/etc/postgresql/16/main/pg_hba.conf"
+
+- name: Listen on all interfaces
+  become: true
+  lineinfile:
+    path: /etc/postgresql/16/main/postgresql.conf
+    line: "listen_addresses = '*'"
+    state: present
+
+- name: Copy schema on vm
+  become: true
+  template:
+    src: "../files/schema.sql"
+    dest: "/tmp/schema.sql"
+
+- name: Restarting service
+  become: true
+  systemd:
+    name: postgresql@16-main
+    state: restarted
+    daemon-reload: yes
+
+- name: Enable postgresql at boot
+  become: true
+  systemd:
+    name: postgresql@16-main
+    state: started
+    enabled: yes
+
+- name: Create postgresql user
+  become: true
+  become_method: sudo
+  become_user: postgres
+  community.postgresql.postgresql_user:
+    db: "{{ db_name }}"
+    name: "{{ db_user }}"
+    password: "{{ db_user_pass }}"
+
+- name: Create sql database
+  become: true
+  become_method: sudo
+  become_user: postgres
+  community.postgresql.postgresql_db:
+    name: "{{ db_name }}"
+    owner: "{{ db_user }}"
+
+- name: Copy schema to database
+  become: true
+  become_method: sudo
+  become_user: postgres  
+  community.postgresql.postgresql_script:
+    db: "{{ db_name }}"
+    path: "/tmp/schema.sql"
+
+- name: Gives perms to user
+  become: true
+  become_method: sudo
+  become_user: postgres
+  community.postgresql.postgresql_privs:
+    database: "{{ db_name }}"
+    state: present
+    privs: SELECT
+    type: table
+    obj: votes
+    role: "{{ db_user }}"

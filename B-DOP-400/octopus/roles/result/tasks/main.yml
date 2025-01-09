@@ -1,0 +1,42 @@
+- name: Copy result service
+  become: true
+  template:
+    src: "../files/result.service"
+    dest: "/etc/systemd/system"
+
+- name: Install node
+  become: true
+  apt:
+    name: nodejs
+    state: present
+
+- name: Install npm
+  become: true
+  apt:
+    name: npm
+    state: present
+
+- name: Untar file in Virtual Machine
+  become: true
+  unarchive:
+    src: "../../../result.tar"
+    dest: "/home/{{ ansible_user }}"
+
+- name: Install node dependencies
+  become: true
+  npm:
+    path: "/home/{{ ansible_user }}/result"
+
+- name: Restarting service
+  become: true
+  systemd:
+    name: result
+    state: restarted
+    daemon-reload: yes
+
+- name: Enable result service on boot
+  become: true
+  systemd:
+    name: result
+    state: started
+    enabled: yes

@@ -1,0 +1,25 @@
+- name: Install Redis
+  become: true
+  apt:
+    name: redis-server
+    state: present
+
+- name: Copy configuration file
+  become: true
+  template:
+    src: ../files/redis.conf
+    dest: /etc/redis/redis.conf
+
+- name: Restarting service
+  become: true
+  systemd:
+    name: redis-server
+    state: restarted
+    daemon-reload: yes
+
+- name: Enable redis on boot
+  become: true
+  systemd:
+    name: redis-server
+    state: started
+    enabled: yes

@@ -1,0 +1,42 @@
+- name: Copy poll service
+  become: true
+  template:
+    src: "../files/poll.service"
+    dest: "/etc/systemd/system"
+
+- name: Install pip
+  become: true
+  apt:
+    name: python3-pip
+    state: present
+
+- name: Untar file in Virtual Machine
+  become: true
+  unarchive:
+    src: "../../../poll.tar"
+    dest: "/home/{{ ansible_user }}"
+
+- name: Create virtual env to install dependencies
+  become: true
+  command:
+    cmd: "python3 -m venv /home/{{ ansible_user }}/poll/venv"
+
+- name: Install python application dependencies
+  become: true
+  ansible.builtin.pip:
+    requirements: "/home/{{ ansible_user }}/poll/requirements.txt"
+    virtualenv: "/home/{{ ansible_user }}/poll/venv"
+
+- name: Restarting service
+  become: true
+  systemd:
+    name: poll
+    state: restarted
+    daemon-reload: yes
+
+- name: Enable poll service on boot
+  become: true
+  systemd:
+    name: poll
+    state: started
+    enabled: yes

@@ -1,0 +1,13 @@
+[Unit]
+Description=Upload poll service
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=REDIS_HOST={{ redis_host }}
+WorkingDirectory=/home/{{ ansible_user }}/poll/
+ExecStart=/home/{{ ansible_user }}/poll/venv/bin/python3 app.py
+Restart:always
+
+[Install]
+WantedBy=multi-user.targets
